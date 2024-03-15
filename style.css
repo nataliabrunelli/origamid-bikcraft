@@ -151,3 +151,52 @@ footer {
   padding: 40px 0px;
   width: 100%;
 }
+
+/*Responsividade*/
+
+@media (max-width: 900px){
+  header {
+   width: 100%;
+   gap: 40px;
+  }
+  .menu {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10;
+  }
+  nav {
+    width: 100%;
+  }
+  li {
+    width: 90%;
+    text-align: center;
+  }
+  .bicicleta {
+    height: 100%;
+    object-fit: cover;
+  }
+  .conteudo h3{
+    font-size: 3rem;
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 700px){
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .descricao {
+    text-align: center;
+  }
+  .descricao::after {
+    display: none;
+  }
+  .descricao a {
+    place-self: center;
+  }
+  .conteudo h3 {
+    padding: 4rem 0;
+    text-align: center;
+  }
+}
