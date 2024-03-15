@@ -130,6 +130,7 @@ h3 {
   grid-template-columns: auto 2fr;
   gap: 10px 20px; /*primeiro é linha depois coluna*/
   padding: 20px;
+  justify-items: left;
 }
 
 .vantagens:hover {
@@ -143,6 +144,7 @@ h3 {
 
 .vantagens p {
   grid-column: 2;
+  text-align: left;
 }
 
 footer {
