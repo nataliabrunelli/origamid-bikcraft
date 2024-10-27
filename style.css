@@ -1,6 +1,28 @@
+:root {
+  --cor-primaria: #e21;
+  --cor-primaria-escura: #900;
+  --cor-fundo-1: #f7f7f7;
+  --cor-fundo-2: #fff;
+  --cor-texto: #000
+  --cor-subtitulo: rgba(0,0,0,0.2);
+  --onda: url("./src/img/onda-clara.svg");
+}
+
+/* MODO CLARO-ESCURO */
+@media(prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo-1: #111;
+    --cor-fundo-2: #000;
+    --cor-texto: #fff;
+  --cor-subtitulo: rgba(255,255,255,0.2);
+  --onda: url("./src/img/onda-escura.svg");
+  }
+}
+
+/* RESET */
 body {
   margin: 0;
-  background-color: #f7f7f7;
+  background-color: var(--cor-fundo-1);
   font-family: Arial;
   display: grid;
   justify-items: center;
@@ -32,6 +54,7 @@ h2,
 h3,
 h4 {
   margin: 0;
+  color: var(--cor-texto);
 }
 
 p {
@@ -45,15 +68,15 @@ p {
 }
 
 .menu a {
-  background-color: white;
-  color: black;
+  background-color: var(--cor-fundo-2);
+  color: var(--cor-texto);
   padding: 1rem 2rem;
   display: block;
   border: 2px solid transparent;
 }
 
 .menu a:hover {
-  border: 2px solid #ee2211;
+  border: 2px solid var(--cor-primaria);
 }
 
 .conteudo {
@@ -66,7 +89,7 @@ p {
   display: grid;
   gap: 20px;
   padding: 40px;
-  background-color: white;
+  background-color: var(--cor-fundo-2);
   align-content: center;
   text-align: right;
   position: relative;
@@ -82,21 +105,21 @@ p {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #ee2211;
+  background-color: var(--cor-primaria);
   position: absolute;
   top: 30px;
   right: -30px;
 }
 
 .descricao a {
-  background-color: #ee2211;
-  color: white;
+  background-color: var(--cor-primaria);
+  color: #fff;
   padding: 1rem 2rem;
   place-self: end;
 }
 
 .descricao a:hover {
-  background-color: #900;
+  background-color: var(--cor-primaria-escura);
 }
 
 .bicicleta {
@@ -107,22 +130,22 @@ p {
 h3 {
   font-size: 4rem;
   text-transform: uppercase;
-  color: #c6c6c6;
+  color: var(--cor-subtitulo);
   text-align: end;
   align-self: center;
   padding: 40px;
-  background-image: url("/img/onda.svg");
+  background-image: var(--onda);
 }
 
 .container-vantagens {
-  background-color: white;
+  background-color: var(--cor-fundo-2);
   padding: 40px;
   margin: 0;
   list-style: none;
 }
 
 .container-vantagens li:nth-child(odd){
-  background-color: #f7f7f7;
+  background-color: var(--cor-fundo-1);
 }
 
 .vantagens {
@@ -134,7 +157,7 @@ h3 {
 }
 
 .vantagens:hover {
-  border-left: 4px solid #ee2211;
+  border-left: 4px solid var(--cor-primaria);
 }
 
 }
@@ -148,7 +171,7 @@ h3 {
 }
 
 footer {
-  background-color: white;
+  background-color: var(--cor-fundo-2);
   text-align: center;
   padding: 40px 0px;
   width: 100%;
